@@ -8,13 +8,15 @@ class CellPhone:
         self.messages = []
         self.vibrate_on = True
     
-    def receive_text(self):
-        pass
+    def receive_text(self, message):
+        message = input('Enter text to send a message to the Cell Phone')
+        self.messages.append(message)
+        print('New Text Received: ' + message)
 
     def toggle_vibrate(self):
         pass
 
     def send_text(self):
         pass
-    
+
 
