@@ -1,14 +1,18 @@
 
 class CellPhone:
     
-    def __init__(self, model):
+    def __init__(self, model, phone_number):
         self.model = model,
-        self.phone_number = '555-555-5555'
-        self.contacts = []
+        self.phone_number = phone_number
+        self.contacts = ['Mom', 'Dad', 'Dan', 'Katie', 'Emily']
         self.messages = []
         self.vibrate_on = True
+
+    def create_contact(self):
+        new_contact = input('Enter your contact name')
+        self.contacts.append(new_contact)
     
-    def receive_text(self, message_received):
+    def receive_text(self):
         message_received = input('Enter text to send a message to the Cell Phone')
         self.messages.append(message_received)
         print('New Text Received: ' + message_received)
@@ -19,7 +23,7 @@ class CellPhone:
         else:
             self.vibrate_on = True
 
-    def send_text(self, message_sent):
+    def send_text(self):
         print('Contacts: ')
         for i in self.contacts:
             print(i)
