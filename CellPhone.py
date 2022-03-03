@@ -9,11 +9,11 @@ class CellPhone:
         self.vibrate_on = True
 
     def create_contact(self):
-        new_contact = input('Enter your contact name')
+        new_contact = input('Enter your contact name ')
         self.contacts.append(new_contact)
     
     def receive_text(self):
-        message_received = input('Enter text to send a message to the Cell Phone')
+        message_received = input('Enter text to send a message to the Cell Phone ')
         self.messages.append(message_received)
         print('New Text Received: ' + message_received)
 
@@ -28,7 +28,7 @@ class CellPhone:
         for i in self.contacts:
             print(i)
         contact = input('Choose an above contact to send a message to')
-        message_sent = input('Enter text to send a message from the Cell Phone')
+        message_sent = input('Enter text to send a message from the Cell Phone ')
         print(f'Message to {contact} sent. Message: {message_sent}')
 
 
